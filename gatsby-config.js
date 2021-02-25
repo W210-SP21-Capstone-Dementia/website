@@ -37,6 +37,13 @@ module.exports = {
         path: `${__dirname}/src/images/persons`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `stock`,
+        path: `${__dirname}/src/images/stock`
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -48,7 +55,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/holding-hands.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

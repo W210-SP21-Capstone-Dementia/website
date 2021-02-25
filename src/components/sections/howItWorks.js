@@ -1,26 +1,35 @@
 import React from "react"
 import styled from "styled-components"
-import { Grid, Paper } from '@material-ui/core';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
 
 import { Container, Section } from "../global"
 
 const HowItWorks = () => {
+
+  function getSteps() {
+    return ['Enter Demographic Data', 'Record Response', 'Receive Score'];
+  }
+
+  const steps = getSteps();
+
+  const [activeStep, setActiveStep] = React.useState(0);   
   
   return (
   <StyledSection id="howitworks">
     <StyledContainer>
       <Title>How It Works</Title>
-      <Grid container spacing={3}>
-        <Grid item xs={4}>
-            <h4 style={{textAlign:'center'}}>Step 1</h4>
-        </Grid>
-        <Grid item xs={4}>
-            <h4 style={{textAlign:'center'}}>Step 2</h4>
-        </Grid>
-        <Grid item xs={4}>
-            <h4 style={{textAlign:'center'}}>Step 3</h4>
-        </Grid>
-      </Grid>
+      <Stepper activeStep={activeStep} alternativeLabel style={{width:'80%'}}>
+        {steps.map((label, index) => {
+          return (
+            <Step key={label} onClick={()=>{setActiveStep(index)}}>
+              <StepLabel>{label}</StepLabel>
+            </Step>
+          );
+        })}
+      </Stepper>
+      
     </StyledContainer>
   </StyledSection>
 )}
@@ -44,3 +53,4 @@ const Title = styled.h3`
   margin: 0 auto 32px;
   text-align: center;
 `
+

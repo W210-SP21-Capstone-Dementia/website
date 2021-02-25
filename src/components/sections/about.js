@@ -4,32 +4,51 @@ import styled from "styled-components"
 import { Section, Container } from "../global"
 import { Grid } from '@material-ui/core';
 
-const About = () => (
+import { graphql, useStaticQuery, Link } from "gatsby"
+import Img from "gatsby-image"
+
+const About = () => {
+
+  const images = useStaticQuery(graphql`
+  query {
+    file(sourceInstanceName: { eq: "stock" }, name: { eq: "bench" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+  `); 
+
+  return (
   <Section id="about">
     <StyledContainer>
       <Subtitle></Subtitle>
       <SectionTitle>About DemensTrac</SectionTitle>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} style={{alignItems:'center'}}>
         <Grid item xs={1}/>
         <Grid item xs={5}>
-
+          <StyledImage fluid={images.file.childImageSharp.fluid} />
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={1}/>
+        <Grid item xs={4}>
             <p>Today, around 50 million patients suffer from dementia worldwide. Caregiving for these patients is exhausting, time-consuming, and expensive - yet despite how widespread this problem is, there is no good solution for tracking how far a patient's dementia has progressed.</p>
             
             <p> Until now.</p>
               
-            <p>We're using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, we have created a product that allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
+            <p>We're using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, to create a product that allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
         </Grid>
         <Grid item xs={1}/>
       </Grid>
     </StyledContainer>
   </Section>
-)
+)}
 
 export default About
 
-const StyledContainer = styled(Container)``
+const StyledContainer = styled(Container)`
+`
 
 const SectionTitle = styled.h3`
   color: ${props => props.theme.color.primary};
@@ -45,4 +64,9 @@ const Subtitle = styled.h5`
   letter-spacing: 0px;
   margin-bottom: 12px;
   text-align: center;
+`
+const StyledImage = styled(Img)`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 `
