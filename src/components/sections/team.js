@@ -1,10 +1,59 @@
 import React from "react"
 import styled from "styled-components"
 import { Grid, Paper, Divider } from '@material-ui/core';
+import { graphql, useStaticQuery, Link } from "gatsby"
+import Img from "gatsby-image"
 
 import { Container, Section } from "../global"
 
-const Team = () => (
+const Team = () => {
+  
+  const images = useStaticQuery(graphql`
+
+    query {
+      jackie:file(sourceInstanceName: { eq: "persons" }, name: { eq: "jackie" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      james:file(sourceInstanceName: { eq: "persons" }, name: { eq: "james" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      michael:file(sourceInstanceName: { eq: "persons" }, name: { eq: "michael" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      param:file(sourceInstanceName: { eq: "persons" }, name: { eq: "param" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      surya:file(sourceInstanceName: { eq: "persons" }, name: { eq: "surya" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
+  return (
   <StyledSection id="team" style={{textAlign:'center'}}>
     <StyledContainer>
       <Title>Our Team</Title>
@@ -12,40 +61,49 @@ const Team = () => (
         
         <Grid item>
           <Grid container direction="row" spacing={3}>
-            <Grid item xs={6}>
-              <h4>Jacky Ma</h4>
+            <Grid item xs={2}/>
+            <Grid item xs={4}>
+              <StyledImage fluid={images.jackie.childImageSharp.fluid} />
+              <h4>Jackie Ma</h4>
               <p>Data Engineer</p>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
+              <StyledImage fluid={images.james.childImageSharp.fluid} />
               <h4 >James Wall</h4>
               <p>Project Manager</p>
             </Grid>
+            <Grid item xs={2}/>
           </Grid>
         </Grid>
 
 
         <Grid item>
           <Grid container direction="row" spacing={3}>
-            <Grid item xs={6}>
+            <Grid item xs={2}/>
+            <Grid item xs={4}>
+              <StyledImage fluid={images.michael.childImageSharp.fluid} />
               <h4>Michael Zeng</h4>
               <p>ML Engineer</p>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
+              <StyledImage fluid={images.param.childImageSharp.fluid} />
               <h4>Param Viswanathan</h4>
               <p>Cloud Architect</p>
             </Grid>
+            <Grid item xs={2}/>
           </Grid>
         </Grid>
 
 
         <Grid item>
           <Grid container direction="row" spacing={3}>
-            <Grid item xs={3}/>
-            <Grid item xs={6}>
+            <Grid item xs={4}/>
+            <Grid item xs={4}>
+              <StyledImage fluid={images.surya.childImageSharp.fluid} />
               <h4>Surya Dutta</h4>
               <p>Designer / Data Scientist</p>
             </Grid>
-            <Grid item xs={3}/>
+            <Grid item xs={4}/>
           </Grid>
         </Grid>
 
@@ -58,20 +116,22 @@ const Team = () => (
         
         <Grid item>
           <Grid container direction="row" spacing={3}>
-            <Grid item xs={6}>
+            <Grid item xs={1}/>
+            <Grid item xs={5}>
               <h4>Ram Balasubramanian</h4>
               <p>Chief Analytics Officer, Mantrah</p>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={5}>
               <h4>Atreya Chaganty</h4>
               <p>Chief Executive Officer, Mantrah</p>
             </Grid>
+            <Grid item xs={1}/>
           </Grid>
         </Grid>
       </Grid>
     </StyledContainer>
   </StyledSection>
-)
+)}
 
 export default Team
 
@@ -89,42 +149,23 @@ const StyledContainer = styled(Container)`
 `
 
 const Title = styled.h3`
-  margin: 0 auto 32px;
+  margin: 0 auto 68px;
   text-align: center;
 `
-
-const TryItButton = styled.button`
-  font-weight: 500;
-  font-size: 14px;
-  color: white;
-  letter-spacing: 1px;
-  height: 60px;
+const StyledImage = styled(Img)`
+  border-radius: 50%;
   display: block;
-  margin-left: 8px;
-  text-transform: uppercase;
-  cursor: pointer;
-  white-space: nowrap;
-  background: ${props => props.theme.color.secondary};
-  border-radius: 4px;
-  padding: 0px 40px;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  outline: 0px;
-  &:hover {
-    box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height:200px;
   @media (max-width: ${props => props.theme.screen.md}) {
+    width: 150px;
+    height: 150px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-left: 0;
+    width: 125px;
+    height: 125px;
+    display: none;
   }
-`
-
-const Subtitle = styled.span`
-  ${props => props.theme.font_size.xxsmall}
-  padding-top: 16px;
-  font-size: 14px;
-  color: ${props => props.theme.color.primary};
 `

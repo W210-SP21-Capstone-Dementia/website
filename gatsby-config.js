@@ -27,8 +27,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `product`,
-        path: `${__dirname}/src/images/product`,
-      },
+        path: `${__dirname}/src/images/product`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `persons`,
+        path: `${__dirname}/src/images/persons`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

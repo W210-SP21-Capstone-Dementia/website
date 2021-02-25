@@ -1,36 +1,43 @@
 import React from "react"
 import styled from "styled-components"
-
 import { Section, Container } from "../global"
+import LocationSearchingIcon from '@material-ui/icons/LocationSearching';
+import TimerIcon from '@material-ui/icons/Timer';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import LockIcon from '@material-ui/icons/Lock';
 
 const Features = () => (
   <Section id="features">
     <StyledContainer>
       <SectionTitle>Features</SectionTitle>
+      <br/><br/>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Accurate</FeatureTitle>
-          <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Reliable</FeatureTitle>
-          <FeatureText>
-            Your data is always safe with us as we use the latest security
-            protocols.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
+          <ThumbUpIcon style={{ fontSize: 40 }} />
           <FeatureTitle>Easy to Use</FeatureTitle>
           <FeatureText>
-            Create smart automated workflows and triggers for your money.
+            Our application will guide you step-by-step through the entire process.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
+          <LocationSearchingIcon style={{ fontSize: 40 }} />
+          <FeatureTitle>Accurate</FeatureTitle>
+          <FeatureText>
+            Our speech-based ML algorithms have achieved world-leading performance.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <TimerIcon style={{ fontSize: 40 }} />
+          <FeatureTitle>Instant Results</FeatureTitle>
+          <FeatureText>
+            Once the recording is complete, you'll get your score within seconds.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <LockIcon style={{ fontSize: 40 }} />
           <FeatureTitle>Anonymous</FeatureTitle>
           <FeatureText>
-            Easily link up to 5 banks to your finance account.
+            We don't save any of your data. <br/>Ever.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
@@ -65,7 +72,7 @@ const FeaturesGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   margin: 0px auto;
   grid-column-gap: 40px;
-  grid-row-gap: 35px;
+  grid-row-gap: 50px;
   @media (max-width: ${props => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     padding: 0 64px;
