@@ -1,12 +1,15 @@
 import React from "react"
 import styled from "styled-components"
+import { Grid, Divider } from '@material-ui/core';
 
 import { Container } from "../global"
 
 const Footer = () => (
   <FooterWrapper id="footer">
     <BrandContainer>
-      <Logo>DemensTrac</Logo>
+      <Logo>Dementia Monitor</Logo>
+      <Divider orientation="vertical" flexItem/>
+      <Copyright>&copy; 2021</Copyright>
     </BrandContainer>
   </FooterWrapper>
 )
@@ -23,7 +26,22 @@ const Logo = styled.div`
   color: ${props => props.theme.color.black.regular};
   text-decoration: none;
   letter-spacing: 1px;
-  margin: 0;
+  margin-right:10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+  text-decoration: none;
+  outline: 0px;
+`
+
+const Copyright = styled.div`
+  ${props => props.theme.font_size.regular};
+  color: ${props => props.theme.color.black.regular};
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-left: 10px;
   display: inline-flex;
   justify-content: center;
   align-items: center;

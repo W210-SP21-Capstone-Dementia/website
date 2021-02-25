@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `DemensTrac`,
-    description: `A simple one page marketing starter for saas companies.`,
-    author: `Keegan Burkett`,
+    title: `Dementia Monitor`,
+    description: `Manage the progression of your loved ones' disease`,
+    author: `Surya Dutta`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

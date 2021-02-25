@@ -25,7 +25,7 @@ const About = () => {
   <Section id="about">
     <StyledContainer>
       <Subtitle></Subtitle>
-      <SectionTitle>About DemensTrac</SectionTitle>
+      <SectionTitle>About Dementia Monitor</SectionTitle>
       <Grid container spacing={3} style={{alignItems:'center'}}>
         <Grid item xs={1}/>
         <Grid item xs={5}>
