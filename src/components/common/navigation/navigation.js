@@ -48,7 +48,7 @@ export default class Navigation extends Component {
   }
 
   getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase().replaceAll(" ","")}`} onClick={this.closeMobileMenu}>
+    <AnchorLink href={`#${item.toLowerCase().split(" ").join("")}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
   )
