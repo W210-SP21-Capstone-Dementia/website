@@ -15,7 +15,7 @@ import {
   ActionsContainer,
 } from "./style"
 
-const NAV_ITEMS = ["How It Works", "Features", "Team", ""]
+const NAV_ITEMS = ["About", "How It Works", "Features", "Team", ""]
 
 export default class Navigation extends Component {
   state = {
@@ -48,7 +48,7 @@ export default class Navigation extends Component {
   }
 
   getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase().replace(" ","")}`} onClick={this.closeMobileMenu}>
+    <AnchorLink href={`#${item.toLowerCase().replaceAll(" ","")}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
   )

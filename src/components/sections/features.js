@@ -6,42 +6,31 @@ import { Section, Container } from "../global"
 const Features = () => (
   <Section id="features">
     <StyledContainer>
-      <Subtitle>Features</Subtitle>
-      <SectionTitle>Smart money management</SectionTitle>
+      <SectionTitle>Features</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Accurate</FeatureTitle>
           <FeatureText>
             Receive budget and spending alerts based on your favorite triggers.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Security</FeatureTitle>
+          <FeatureTitle>Reliable</FeatureTitle>
           <FeatureText>
             Your data is always safe with us as we use the latest security
             protocols.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Automation</FeatureTitle>
+          <FeatureTitle>Easy to Use</FeatureTitle>
           <FeatureText>
             Create smart automated workflows and triggers for your money.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Aggregation</FeatureTitle>
+          <FeatureTitle>Anonymous</FeatureTitle>
           <FeatureText>
             Easily link up to 5 banks to your finance account.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Payments</FeatureTitle>
-          <FeatureText>Send money to friends and family with ease.</FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Rewards</FeatureTitle>
-          <FeatureText>
-            High interest and rewards for hitting your goals.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
@@ -51,7 +40,8 @@ const Features = () => (
 
 export default Features
 
-const StyledContainer = styled(Container)``
+const StyledContainer = styled(Container)`
+`
 
 const SectionTitle = styled.h3`
   color: ${props => props.theme.color.primary};
