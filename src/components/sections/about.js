@@ -7,10 +7,8 @@ import { Grid } from '@material-ui/core';
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
-import useWindowWidth from "../dimensions";
-
 const About = () => {
-  
+
   const images = useStaticQuery(graphql`
   query {
     file(sourceInstanceName: { eq: "product" }, name: { eq: "monitor" }) {
@@ -28,31 +26,14 @@ const About = () => {
     <StyledContainer>
       <Subtitle></Subtitle>
       <SectionTitle>About Dementia Monitor</SectionTitle>
-
-      {useWindowWidth() > 800 ? <Grid container spacing={3} style={{alignItems:'center'}}>
-        <Grid item xs={1}/>
-        <Grid item xs={3}>
+        <Flex>
           <StyledImage fluid={images.file.childImageSharp.fluid} />
-        </Grid>
-        <Grid item xs={1}/>
-        <Grid item xs={6}>
+          <div style={{alignContent:'left'}}>
             <p>Today, around 50 million patients suffer from dementia worldwide. Caregiving for these patients is exhausting, time-consuming, and expensive - yet despite how widespread this problem is, there is no good solution for tracking how far a patient's dementia has progressed.</p>
-            
-            <p> Until now.</p>
-              
+            <p>Until now.</p>
             <p>We're using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, to create a product that allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
-        </Grid>
-        <Grid item xs={1}/>
-      </Grid> : 
-      <div>
-         <p>Today, around 50 million patients suffer from dementia worldwide. Caregiving for these patients is exhausting, time-consuming, and expensive - yet despite how widespread this problem is, there is no good solution for tracking how far a patient's dementia has progressed.</p>
-            
-          <p> Until now.</p>
-            
-          <p>We're using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, to create a product that allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
-      </div>}
-
-      
+          </div>
+        </Flex>
     </StyledContainer>
   </Section>
 )}
@@ -70,6 +51,17 @@ const SectionTitle = styled.h3`
   text-align: center;
 `
 
+const Flex = styled.div`
+  display: grid;
+  justify-content: space-between;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    grid-template-columns: 1fr;
+    grid-gap: 64px;
+  }
+`
+
 const Subtitle = styled.h5`
   font-size: 16px;
   color: ${props => props.theme.color.accent};
@@ -82,4 +74,7 @@ const StyledImage = styled(Img)`
   display: block;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    display:none;
+  }
 `
