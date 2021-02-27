@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { Grid, Paper, Divider } from '@material-ui/core';
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 import { Container, Section } from "../global"
 
@@ -65,12 +67,12 @@ const Team = () => {
             <Grid item xs={4}>
               <StyledImage fluid={images.jackie.childImageSharp.fluid} />
               <h4>Jackie Ma</h4>
-              <p>Data Engineer</p>
+              <p style={{marginTop:-20}}>Data Engineer</p>
             </Grid>
             <Grid item xs={4}>
               <StyledImage fluid={images.james.childImageSharp.fluid} />
               <h4 >James Wall</h4>
-              <p>Project Manager</p>
+              <p style={{marginTop:-20}}>Project Manager</p>
             </Grid>
             <Grid item xs={2}/>
           </Grid>
@@ -83,12 +85,12 @@ const Team = () => {
             <Grid item xs={4}>
               <StyledImage fluid={images.michael.childImageSharp.fluid} />
               <h4>Michael Zeng</h4>
-              <p>ML Engineer</p>
+              <p style={{marginTop:-20}}>ML Engineer</p>
             </Grid>
             <Grid item xs={4}>
               <StyledImage fluid={images.param.childImageSharp.fluid} />
               <h4>Param Viswanathan</h4>
-              <p>Cloud Architect</p>
+              <p style={{marginTop:-20}}>Cloud Architect</p>
             </Grid>
             <Grid item xs={2}/>
           </Grid>
@@ -101,7 +103,13 @@ const Team = () => {
             <Grid item xs={4}>
               <StyledImage fluid={images.surya.childImageSharp.fluid} />
               <h4>Surya Dutta</h4>
-              <p>Designer / Data Scientist</p>
+              <p style={{marginTop:-20}}>Data Scientist / Designer</p>
+              <a href="https://github.com/suryadutta" target="_blank">
+                <GitHubIcon fontSize="large" style={{ margin: 10, color:"black" }} />
+              </a>
+              <a href="https://www.linkedin.com/in/suryadutta" target="_blank">
+                <LinkedInIcon fontSize="large" style={{ margin: 10, color:"#2867b2" }} />
+              </a>
             </Grid>
             <Grid item xs={4}/>
           </Grid>
