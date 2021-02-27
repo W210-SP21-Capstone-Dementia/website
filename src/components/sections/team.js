@@ -172,8 +172,7 @@ const StyledImage = styled(Img)`
     height: 150px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 125px;
-    height: 125px;
-    display: none;
+    width: 100px;
+    height: 100px;
   }
 `

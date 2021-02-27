@@ -29,16 +29,10 @@ const Header = () => {
           <HeaderTextGroup>
             <Subtitle>Let Us Help You</Subtitle>
             <h1>
-              Manange the Health
-              <br />
-              of your Loved Ones
+              Manange the Health of your Loved Ones
             </h1>
             <h2>
-              We are creating a platform that allows you to 
-              <br/>
-              quickly, reliably, and securely measure
-              <br/>
-              the progression of dementia 
+              We are creating a platform that allows you to quickly, reliably, and securely measure the progression of dementia 
             </h2>
               <HeaderButton>Try it out</HeaderButton>
           </HeaderTextGroup>
@@ -71,11 +65,11 @@ const Subtitle = styled.h5`
 
 const HeaderTextGroup = styled.div`
   margin: 0;
+  max-width: 465px;
 
   > div {
     width: 120%;
     margin-bottom: -4.5%;
-
     @media (max-width: ${props => props.theme.screen.md}) {
       margin: 0 16px;
     }
