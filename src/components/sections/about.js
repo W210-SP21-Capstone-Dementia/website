@@ -7,6 +7,8 @@ import { Grid } from '@material-ui/core';
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
+import useWindowDimensions from "../dimensions";
+
 const About = () => {
 
   const images = useStaticQuery(graphql`
@@ -21,12 +23,15 @@ const About = () => {
   }
   `); 
 
+  const { height, width } = useWindowDimensions();
+
   return (
   <Section id="about">
     <StyledContainer>
       <Subtitle></Subtitle>
       <SectionTitle>About Dementia Monitor</SectionTitle>
-      <Grid container spacing={3} style={{alignItems:'center'}}>
+
+      {width > 800 ? <Grid container spacing={3} style={{alignItems:'center'}}>
         <Grid item xs={1}/>
         <Grid item xs={3}>
           <StyledImage fluid={images.file.childImageSharp.fluid} />
@@ -40,7 +45,16 @@ const About = () => {
             <p>We're using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, to create a product that allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
         </Grid>
         <Grid item xs={1}/>
-      </Grid>
+      </Grid> : 
+      <div>
+         <p>Today, around 50 million patients suffer from dementia worldwide. Caregiving for these patients is exhausting, time-consuming, and expensive - yet despite how widespread this problem is, there is no good solution for tracking how far a patient's dementia has progressed.</p>
+            
+          <p> Until now.</p>
+            
+          <p>We're using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, to create a product that allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
+      </div>}
+
+      
     </StyledContainer>
   </Section>
 )}
