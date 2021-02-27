@@ -7,7 +7,7 @@ import { Grid } from '@material-ui/core';
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
-import useWindowDimensions from "../dimensions";
+import useWindowWidth from "../dimensions";
 
 const About = () => {
 
@@ -23,7 +23,7 @@ const About = () => {
   }
   `); 
 
-  const { height, width } = useWindowDimensions();
+  const width = useWindowWidth();
 
   return (
   <Section id="about">
