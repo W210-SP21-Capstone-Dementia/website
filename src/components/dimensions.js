@@ -9,6 +9,7 @@ export default function useWindowWidth() {
 
     const handleResize = () => setWidth(window.innerWidth)
     window.addEventListener('resize', handleResize)
+    window.addEventListener('DOMContentLoaded', handleResize)
 
     return () => {
       window.removeEventListener('resize', handleResize)

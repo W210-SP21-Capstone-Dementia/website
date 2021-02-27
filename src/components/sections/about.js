@@ -10,7 +10,7 @@ import Img from "gatsby-image"
 import useWindowWidth from "../dimensions";
 
 const About = () => {
-
+  
   const images = useStaticQuery(graphql`
   query {
     file(sourceInstanceName: { eq: "product" }, name: { eq: "monitor" }) {
@@ -23,15 +23,13 @@ const About = () => {
   }
   `); 
 
-  const width = useWindowWidth();
-
   return (
   <Section id="about">
     <StyledContainer>
       <Subtitle></Subtitle>
       <SectionTitle>About Dementia Monitor</SectionTitle>
 
-      {width > 800 ? <Grid container spacing={3} style={{alignItems:'center'}}>
+      {useWindowWidth() > 800 ? <Grid container spacing={3} style={{alignItems:'center'}}>
         <Grid item xs={1}/>
         <Grid item xs={3}>
           <StyledImage fluid={images.file.childImageSharp.fluid} />
