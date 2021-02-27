@@ -11,7 +11,7 @@ const About = () => {
 
   const images = useStaticQuery(graphql`
   query {
-    file(sourceInstanceName: { eq: "stock" }, name: { eq: "bench" }) {
+    file(sourceInstanceName: { eq: "product" }, name: { eq: "monitor" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
@@ -28,11 +28,11 @@ const About = () => {
       <SectionTitle>About Dementia Monitor</SectionTitle>
       <Grid container spacing={3} style={{alignItems:'center'}}>
         <Grid item xs={1}/>
-        <Grid item xs={5}>
+        <Grid item xs={3}>
           <StyledImage fluid={images.file.childImageSharp.fluid} />
         </Grid>
         <Grid item xs={1}/>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
             <p>Today, around 50 million patients suffer from dementia worldwide. Caregiving for these patients is exhausting, time-consuming, and expensive - yet despite how widespread this problem is, there is no good solution for tracking how far a patient's dementia has progressed.</p>
             
             <p> Until now.</p>
@@ -54,7 +54,7 @@ const SectionTitle = styled.h3`
   color: ${props => props.theme.color.primary};
   display: flex;
   justify-content: center;
-  margin: 0 auto 40px;
+  margin: 0 100px 40px;
   text-align: center;
 `
 
@@ -66,6 +66,7 @@ const Subtitle = styled.h5`
   text-align: center;
 `
 const StyledImage = styled(Img)`
+  width: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;

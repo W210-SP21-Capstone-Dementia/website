@@ -8,9 +8,9 @@ import { Container } from "../global"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "help" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -185,7 +185,7 @@ const HeaderButton = styled.button`
   }
 `
 const ImageWrapper = styled.div`
-  justify-self: end;
+  justify-self: center;
   align-self: center;
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: center;
@@ -193,9 +193,9 @@ const ImageWrapper = styled.div`
 `
 
 const StyledImage = styled(Img)`
-  width: 500px;
+  width: 350px;
   @media (max-width: ${props => props.theme.screen.md}) {
-    width: 400px;
+    width: 300px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 300px;
