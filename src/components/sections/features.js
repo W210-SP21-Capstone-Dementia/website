@@ -7,7 +7,7 @@ import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import LockIcon from '@material-ui/icons/Lock';
 
 const Features = () => (
-  <Section id="features">
+  <StyledSection id="features">
     <StyledContainer>
       <SectionTitle>Features</SectionTitle>
       <br/><br/>
@@ -42,12 +42,18 @@ const Features = () => (
         </FeatureItem>
       </FeaturesGrid>
     </StyledContainer>
-  </Section>
+  </StyledSection>
 )
 
 export default Features
 
+const StyledSection = styled(Section)`
+  background-color: ${props => props.theme.color.background.light};
+  clip-path: polygon(0% 14%, 100% 0%, 100% 100%, 0% 86%);
+`
+
 const StyledContainer = styled(Container)`
+  margin:100px;
 `
 
 const SectionTitle = styled.h3`

@@ -66,13 +66,25 @@ const Team = () => {
             <Grid item xs={2}/>
             <Grid item xs={4}>
               <StyledImage fluid={images.jackie.childImageSharp.fluid} />
-              <h4>Jackie Ma</h4>
+              <h4>Jacky Ma</h4>
               <p style={{marginTop:-20}}>Data Engineer</p>
+              <a href="https://github.com/jjm011" target="_blank">
+                <GitHubIcon fontSize="large" style={{ margin: 10, color:"black" }} />
+              </a>
+              <a href="https://www.linkedin.com/in/junjiema522/" target="_blank">
+                <LinkedInIcon fontSize="large" style={{ margin: 10, color:"#2867b2" }} />
+              </a>
             </Grid>
             <Grid item xs={4}>
               <StyledImage fluid={images.james.childImageSharp.fluid} />
               <h4 >James Wall</h4>
               <p style={{marginTop:-20}}>Project Manager</p>
+              <a href="https://github.com/james-wall" target="_blank">
+                <GitHubIcon fontSize="large" style={{ margin: 10, color:"black" }} />
+              </a>
+              <a href="https://www.linkedin.com/in/jamespwall/" target="_blank">
+                <LinkedInIcon fontSize="large" style={{ margin: 10, color:"#2867b2" }} />
+              </a>
             </Grid>
             <Grid item xs={2}/>
           </Grid>
@@ -86,11 +98,23 @@ const Team = () => {
               <StyledImage fluid={images.michael.childImageSharp.fluid} />
               <h4>Michael Zeng</h4>
               <p style={{marginTop:-20}}>ML Engineer</p>
+              <a href="https://github.com/zengm71" target="_blank">
+                <GitHubIcon fontSize="large" style={{ margin: 10, color:"black" }} />
+              </a>
+              <a href="https://www.linkedin.com/in/miaozeng/" target="_blank">
+                <LinkedInIcon fontSize="large" style={{ margin: 10, color:"#2867b2" }} />
+              </a>
             </Grid>
             <Grid item xs={4}>
               <StyledImage fluid={images.param.childImageSharp.fluid} />
               <h4>Param Viswanathan</h4>
               <p style={{marginTop:-20}}>Cloud Architect</p>
+              <a href="https://github.com/pviswana" target="_blank">
+                <GitHubIcon fontSize="large" style={{ margin: 10, color:"black" }} />
+              </a>
+              <a href="https://www.linkedin.com/in/param-viswanathan-29812a" target="_blank">
+                <LinkedInIcon fontSize="large" style={{ margin: 10, color:"#2867b2" }} />
+              </a>
             </Grid>
             <Grid item xs={2}/>
           </Grid>

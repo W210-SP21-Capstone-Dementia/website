@@ -29,8 +29,8 @@ const About = () => {
         <Flex>
           <StyledImage fluid={images.file.childImageSharp.fluid} />
           <div style={{alignContent:'left'}}>
-            <p>Today, around 50 million patients suffer from dementia worldwide. Caregiving for these patients is exhausting, time-consuming, and expensive - yet despite how widespread this problem is, there is no good solution for tracking how far a patient's dementia has progressed.</p>
-            <p>Until now.</p>
+            <p>If your loved one is one of 50 million patients worldwide afflicted with dementia, you know just how hard it is to be a caregiver. Managing this disease can feel overwhelming, especially if you don't know how dementia is progressing in your patients.</p>
+            <p>But it doesn't have to be this hard.<b>We can help.</b></p>
             <p>We're using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, to create a product that allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
           </div>
         </Flex>

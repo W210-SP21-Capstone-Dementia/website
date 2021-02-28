@@ -27,9 +27,9 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Let Us Help You</Subtitle>
+            <Subtitle>Let us help you</Subtitle>
             <h1>
-              Manange the Health of your Loved Ones
+              Manange the health of your loved ones
             </h1>
             <h2>
               We are creating a platform that allows you to quickly, reliably, and securely measure the progression of dementia 

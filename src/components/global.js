@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { createMuiTheme } from '@material-ui/core/styles';
 
 export const Container = styled.div`
   max-width: 1200px;
@@ -55,3 +56,20 @@ export const Section = styled.section`
         : props.theme.color.primary
     }`};
 `
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#757ce8',
+      main: '#3f50b5',
+      dark: '#002884',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#098b8c',
+      main: '#098b8c',
+      dark: '#098b8c',
+      contrastText: '#000',
+    },
+  },
+});

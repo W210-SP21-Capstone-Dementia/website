@@ -44,6 +44,13 @@ module.exports = {
         path: `${__dirname}/src/images/stock`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `screenshots`,
+        path: `${__dirname}/src/images/screenshots`
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
