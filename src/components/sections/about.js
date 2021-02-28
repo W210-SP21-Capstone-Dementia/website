@@ -14,7 +14,7 @@ const About = () => {
     file(sourceInstanceName: { eq: "product" }, name: { eq: "monitor" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
