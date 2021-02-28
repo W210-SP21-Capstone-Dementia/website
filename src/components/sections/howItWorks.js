@@ -73,7 +73,7 @@ const HowItWorks = () => {
   const descriptions = [
     <p>First, the program will instruct you to enter your patient's demographic information.<br/><br/> This will only be used for model purposes and not saved anywhere.</p>,
     <p>The program will display the picture prompt and show guidance instructions. <br/><br/> You will ask the patient to describe the picture for about two minutes and record their response.</p>,
-    <p>The anonymous recording will be sent to our machine learning algorithms. <br/><br/>These models will immediately analyze the patient's response and speech patterns, and return an estimated MMSE score within 30 seconds.</p>
+    <p>The anonymous recording will be sent to our machine learning algorithms. <br/><br/>These models will immediately analyze the patient's response and speech patterns, and return an estimated cognition score within 30 seconds.</p>
   ]
 
   const [activeStep, setActiveStep] = React.useState(0);   
