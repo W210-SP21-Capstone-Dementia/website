@@ -71,7 +71,7 @@ const Subtitle = styled.h5`
   text-align: center;
 `
 const StyledImage = styled(Img)`
-  width: 200px;
+  width: 250px;
   display: block;
   margin-left: auto;
   margin-right: auto;
