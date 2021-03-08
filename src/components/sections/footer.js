@@ -7,7 +7,7 @@ import { Container } from "../global"
 const Footer = () => (
   <FooterWrapper id="footer">
     <BrandContainer>
-      <Logo>Dementia Monitor</Logo>
+      <Logo>Cognition Tracker</Logo>
       <Divider orientation="vertical" flexItem/>
       <Copyright>&copy; 2021</Copyright>
     </BrandContainer>

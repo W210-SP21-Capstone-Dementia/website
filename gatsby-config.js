@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Dementia Monitor`,
+    title: `Cognition Tracker`,
     description: `Manage the progression of your loved ones' disease`,
     author: `Surya Dutta`,
   },

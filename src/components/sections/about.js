@@ -25,14 +25,14 @@ const About = () => {
   <Section id="about">
     <StyledContainer>
       <Subtitle></Subtitle>
-      <SectionTitle>About Dementia Monitor</SectionTitle>
+      <SectionTitle>About Cognition Tracker</SectionTitle>
         <Flex>
           <StyledImage fluid={images.file.childImageSharp.fluid} />
           <div style={{alignContent:'left'}}>
             <p>If your loved one is one of 50 million patients worldwide afflicted with dementia, you know just how hard it is to be a caregiver. Managing this disease can feel overwhelming, especially if you don't know how dementia is progressing in your patients.</p>
             <p>But it doesn't have to be this hard.</p>
             <p><b>We can help.</b></p>
-            <p>Using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, Dementia Monitor allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
+            <p>Using cutting-edge machine learning algorithms and guidance from the world's leading experts in dementia and clinical psychology, Cognition Tracker allows caregivers to easily, reliably, and securely monitor the progression of their patients' dementia, from the comfort of their own homes.</p>
           </div>
         </Flex>
     </StyledContainer>
