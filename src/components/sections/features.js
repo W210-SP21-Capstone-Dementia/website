@@ -37,7 +37,7 @@ const Features = () => (
           <LockIcon style={{ fontSize: 40 }} />
           <FeatureTitle>Secure</FeatureTitle>
           <FeatureText>
-            We take every precaution to keep all of your data safe.
+            We take every precaution to keep <br/>all of your data safe.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
@@ -53,7 +53,11 @@ const StyledSection = styled(Section)`
 `
 
 const StyledContainer = styled(Container)`
-  margin:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 80px;
 `
 
 const SectionTitle = styled.h3`

@@ -95,7 +95,7 @@ export default class Navigation extends Component {
           </Mobile>
 
           <Mobile hide>{this.getNavList({})}</Mobile>
-          <ActionsContainer>
+          <ActionsContainer style={{display:"none"}}>
             <button>Try it out</button>
           </ActionsContainer>
         </StyledContainer>

@@ -34,7 +34,7 @@ const Header = () => {
             <h2>
               We are creating a platform that allows you to quickly, reliably, and securely measure the progression of dementia 
             </h2>
-              <HeaderButton>Try it out</HeaderButton>
+              {/* <HeaderButton>Try it out</HeaderButton> */}
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />
