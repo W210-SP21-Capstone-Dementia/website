@@ -35,9 +35,9 @@ const Features = () => (
         </FeatureItem>
         <FeatureItem>
           <LockIcon style={{ fontSize: 40 }} />
-          <FeatureTitle>Anonymous</FeatureTitle>
+          <FeatureTitle>Secure</FeatureTitle>
           <FeatureText>
-            We don't save any of your data. <br/>Ever.
+            We take every precaution to keep all of your data safe.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
