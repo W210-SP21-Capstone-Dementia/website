@@ -29,7 +29,7 @@ const Header = () => {
           <HeaderTextGroup>
             <Subtitle>Let us help you</Subtitle>
             <h1>
-              Manange the health of your loved ones
+              Manage the health of your loved ones
             </h1>
             <h2>
               We are creating a platform that allows you to quickly, reliably, and securely measure the progression of dementia 
