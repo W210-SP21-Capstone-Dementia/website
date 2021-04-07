@@ -160,6 +160,21 @@ const Team = () => {
             <Grid item xs={1}/>
           </Grid>
         </Grid>
+
+        <Grid item>
+          <Grid container direction="row" spacing={3}>
+            <Grid item xs={1}/>
+            <Grid item xs={5}>
+              <h4>Dr. Dan Joyce</h4>
+              <p>Consultant Psychiatrist at <br/>Oxford Health NHS Foundation Trust, <br/>Ph.D. in Artificial Intelligence</p>
+            </Grid>
+            <Grid item xs={5}>
+              <h4>Dr. Neha Dixit</h4>
+              <p>Licensed Clinical Psychologist <br/>with specialty training<br/>in Clinical Neuropsychology</p>
+            </Grid>
+            <Grid item xs={1}/>
+          </Grid>
+        </Grid>
       </Grid>
     </StyledContainer>
   </StyledSection>

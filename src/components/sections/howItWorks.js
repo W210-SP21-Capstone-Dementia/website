@@ -23,10 +23,10 @@ const HowItWorks = () => {
     MuiStepIcon: {
       root: {
         '&$completed': {
-          color: '#098b8c',
+          color: '#735D78',
         },
         '&$active': {
-          color: '#098b8c',
+          color: '#735D78',
         },
       },
       active: {},
@@ -62,7 +62,7 @@ const HowItWorks = () => {
 
   `);
 
-  const steps = ['Enter Demographic Data', 'Record Response', 'Receive Score'];
+  const steps = ['Picture Description Task', 'Instantaneous Estimate', 'Longitudinal Tracking'];
 
   const images = [
     screenshots.one.childImageSharp.fluid,
@@ -71,9 +71,9 @@ const HowItWorks = () => {
   ]
 
   const descriptions = [
-    <p>First, the program will instruct you to enter your patient's demographic information.<br/><br/> This will only be used for model purposes and not saved anywhere.</p>,
-    <p>The program will display the picture prompt and show guidance instructions. <br/><br/> You will ask the patient to describe the picture for about two minutes and record their response.</p>,
-    <p>The anonymous recording will be sent to our machine learning algorithms. <br/><br/>These models will immediately analyze the patient's response and speech patterns, and return an estimated cognition score within 30 seconds.</p>
+    <p>We utilize a picture prompt commonly used for aphasia detection called the Cookie Theft Picture Task. <br/><br/>The app will guide the caregiver through the process of administering the test, in which the patient will describe the picture for about two minutes and record their response.</p>,
+    <p>The recording will be sent to our deep learning inference pipeline. <br/><br/>Our ensemble of models will immediately analyze the patient's response and speech patterns, and return an estimated cognition score within 10 seconds.</p>,
+    <p>The patient, caregivers, and clinicians will be able to review the patient's cognitive score history to determine trends and identify proximal data like medication adherence and exercise.<br/><br/>Combined, this will help caregivers and clinicians adjust the patient's treatment plan and give suitable interventions.</p>
   ]
 
   const [activeStep, setActiveStep] = React.useState(0);   
@@ -122,7 +122,7 @@ const HowItWorks = () => {
                           color="primary"
                           onClick={handleNext}
                           style={{
-                            backgroundColor:"#098b8c",
+                            backgroundColor:"#735D78",
                             fontSize:12,
                           }}
                         >
@@ -177,7 +177,7 @@ const Flex = styled.div`
 
 const StyledImage = styled(Img)`
   width: 600px;
-  height: 400px;
+  height: 450px;
   display: block;
   margin-left: auto;
   margin-right: auto;
