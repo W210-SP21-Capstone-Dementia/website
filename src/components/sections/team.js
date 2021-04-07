@@ -52,6 +52,40 @@ const Team = () => {
           }
         }
       }
+
+      ram:file(sourceInstanceName: { eq: "persons" }, name: { eq: "ram" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      atreya:file(sourceInstanceName: { eq: "persons" }, name: { eq: "atreya" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+
+      dan:file(sourceInstanceName: { eq: "persons" }, name: { eq: "dan" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      neha:file(sourceInstanceName: { eq: "persons" }, name: { eq: "neha" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
     }
   `);
 
@@ -150,10 +184,12 @@ const Team = () => {
           <Grid container direction="row" spacing={3}>
             <Grid item xs={1}/>
             <Grid item xs={5}>
+              <StyledImage fluid={images.ram.childImageSharp.fluid} />
               <h4>Ram Balasubramanian</h4>
               <p>Chief Analytics Officer, Mantrah</p>
             </Grid>
             <Grid item xs={5}>
+              <StyledImage fluid={images.atreya.childImageSharp.fluid} />
               <h4>Atreya Chaganty</h4>
               <p>Chief Executive Officer, Mantrah</p>
             </Grid>
@@ -165,10 +201,12 @@ const Team = () => {
           <Grid container direction="row" spacing={3}>
             <Grid item xs={1}/>
             <Grid item xs={5}>
+              <StyledImage fluid={images.dan.childImageSharp.fluid} />
               <h4>Dr. Dan Joyce</h4>
               <p>Consultant Psychiatrist at <br/>Oxford Health NHS Foundation Trust, <br/>Ph.D. in Artificial Intelligence</p>
             </Grid>
             <Grid item xs={5}>
+              <StyledImage fluid={images.neha.childImageSharp.fluid} />
               <h4>Dr. Neha Dixit</h4>
               <p>Licensed Clinical Psychologist <br/>with specialty training<br/>in Clinical Neuropsychology</p>
             </Grid>
